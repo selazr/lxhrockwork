@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import HeroB2B from "@/sections/HeroB2B";
 import Comparison from "@/sections/Comparison";
@@ -7,19 +8,41 @@ import Portfolio from "@/sections/Portfolio";
 import CTA from "@/sections/CTA";
 
 export default function App() {
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === "undefined") {
+      return "dark";
+    }
+    return window.localStorage.getItem("lxh-theme") ?? "dark";
+  });
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+    window.localStorage.setItem("lxh-theme", theme);
+  }, [theme]);
+
+  const isDark = theme === "dark";
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+    window.document.documentElement.classList.toggle("dark", isDark);
+  }, [isDark]);
+
   return (
-    <div className="min-h-screen bg-zinc-950 text-white">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Background accents */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-white/5 blur-3xl" />
-        <div className="absolute -bottom-32 right-0 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
-        <div className="absolute left-10 top-1/3 h-56 w-56 rounded-full bg-emerald-400/10 blur-[120px]" />
+        <div className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-foreground/5 blur-3xl" />
+        <div className="absolute -bottom-32 right-0 h-80 w-80 rounded-full bg-foreground/5 blur-3xl" />
+        <div className="absolute left-10 top-1/3 h-56 w-56 rounded-full bg-primary/10 blur-[120px]" />
       </div>
 
       <header className="relative mx-auto max-w-6xl px-6 py-8">
         <nav className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="h-11 w-11 rounded-2xl border border-white/10 bg-white/5 p-2 shadow-lg shadow-black/30">
+            <div className="h-11 w-11 rounded-2xl border border-foreground/10 bg-foreground/5 p-2 shadow-lg shadow-black/30">
               <img
                 src="/image.jpg"
                 alt="LXH Rockwork logo"
@@ -28,28 +51,46 @@ export default function App() {
             </div>
             <div>
               <p className="text-sm font-semibold leading-none">LXH Rockwork</p>
-              <p className="text-xs text-white/60">Theming · Design · Structures</p>
+              <p className="text-xs text-foreground/60">Theming · Design · Structures</p>
             </div>
           </div>
 
           <div className="hidden items-center gap-2 md:flex">
-            <a href="#comparison" className="rounded-full px-4 py-2 text-sm text-white/80 hover:bg-white/5">
+            <a
+              href="#comparison"
+              className="rounded-full px-4 py-2 text-sm text-foreground/80 hover:bg-foreground/5"
+            >
               Comparison
             </a>
-            <a href="#configurator" className="rounded-full px-4 py-2 text-sm text-white/80 hover:bg-white/5">
+            <a
+              href="#configurator"
+              className="rounded-full px-4 py-2 text-sm text-foreground/80 hover:bg-foreground/5"
+            >
               Configurator
             </a>
-            <a href="#contact" className="rounded-full px-4 py-2 text-sm text-white/80 hover:bg-white/5">
+            <a
+              href="#contact"
+              className="rounded-full px-4 py-2 text-sm text-foreground/80 hover:bg-foreground/5"
+            >
               Contact
             </a>
           </div>
 
-          <a
-            href="#contact"
-            className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white hover:bg-white/10"
-          >
-            Request a proposal
-          </a>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setTheme(isDark ? "light" : "dark")}
+              className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-foreground/80 hover:bg-foreground/10"
+            >
+              Tema: {isDark ? "Oscuro" : "Claro"}
+            </button>
+            <a
+              href="#contact"
+              className="rounded-full border border-foreground/10 bg-foreground/5 px-4 py-2 text-sm text-foreground hover:bg-foreground/10"
+            >
+              Request a proposal
+            </a>
+          </div>
         </nav>
       </header>
 
@@ -63,7 +104,7 @@ export default function App() {
       </main>
 
       <footer className="relative mx-auto max-w-6xl px-6 py-10">
-        <div className="flex flex-col gap-2 border-t border-white/10 pt-6 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-2 border-t border-foreground/10 pt-6 text-sm text-foreground/60 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} LXH Rockwork</p>
           <p>React SPA · Tailwind · Framer Motion · shadcn/ui</p>
         </div>
@@ -77,7 +118,7 @@ export default function App() {
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="fixed bottom-6 right-6 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white/80 hover:bg-white/10"
+        className="fixed bottom-6 right-6 rounded-2xl border border-foreground/10 bg-foreground/5 px-4 py-3 text-sm text-foreground/80 hover:bg-foreground/10"
       >
         Back to top
       </motion.a>

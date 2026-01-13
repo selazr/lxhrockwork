@@ -20,7 +20,7 @@ export default function HeroB2B() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.08 }}
-            className="mt-4 text-base text-white/70"
+            className="mt-4 text-base text-foreground/70"
           >
             We fabricate modular pieces in the exact shape and size you need,
             optimized for weight, installation efficiency, and engineering
@@ -48,32 +48,34 @@ export default function HeroB2B() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.12 }}
-          className="rounded-3xl border border-white/10 bg-white/5 p-4"
+          className="rounded-3xl border border-foreground/10 bg-foreground/5 p-4"
         >
-          <div className="relative overflow-hidden rounded-2xl border border-white/10">
+          <div className="relative overflow-hidden rounded-2xl border border-foreground/10">
             <img
               src="/image.jpg"
               alt="Featured project placeholder"
               className="h-72 w-full object-cover md:h-80"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4">
               <p className="text-sm font-semibold">Featured project</p>
-              <p className="text-xs text-white/70">Replace /public/image.jpg with a real render or photo.</p>
+              <p className="text-xs text-foreground/70">
+                Replace /public/image.jpg with a real render or photo.
+              </p>
             </div>
           </div>
 
           <div className="mt-4 grid grid-cols-3 gap-3">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="text-xs text-white/60">Custom</p>
+            <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
+              <p className="text-xs text-foreground/60">Custom</p>
               <p className="mt-1 text-lg font-semibold">Shape / scale</p>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="text-xs text-white/60">Weight</p>
+            <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
+              <p className="text-xs text-foreground/60">Weight</p>
               <p className="mt-1 text-lg font-semibold">Optimized</p>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <p className="text-xs text-white/60">Delivery</p>
+            <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
+              <p className="text-xs text-foreground/60">Delivery</p>
               <p className="mt-1 text-lg font-semibold">Ready to install</p>
             </div>
           </div>
