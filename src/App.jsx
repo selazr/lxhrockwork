@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Moon, Sun } from "lucide-react";
 import HeroB2B from "@/sections/HeroB2B";
 import Comparison from "@/sections/Comparison";
 import Configurator from "@/sections/Configurator";
@@ -80,9 +81,17 @@ export default function App() {
             <button
               type="button"
               onClick={() => setTheme(isDark ? "light" : "dark")}
-              className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-foreground/80 hover:bg-foreground/10"
+              className="flex items-center gap-2 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-foreground/80 hover:bg-foreground/10"
             >
-              Tema: {isDark ? "Oscuro" : "Claro"}
+              Tema
+              {isDark ? (
+                <Moon className="h-4 w-4" aria-hidden="true" />
+              ) : (
+                <Sun className="h-4 w-4" aria-hidden="true" />
+              )}
+              <span className="sr-only">
+                {isDark ? "Oscuro" : "Claro"}
+              </span>
             </button>
             <a
               href="#contact"
