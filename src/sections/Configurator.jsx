@@ -26,7 +26,7 @@ export default function Configurator() {
 
   return (
     <section id="configurator" className="relative mx-auto max-w-6xl px-6 py-12">
-      <div className="rounded-4xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/20 md:p-10">
+      <div className="rounded-4xl border border-foreground/10 bg-foreground/5 p-6 shadow-2xl shadow-black/20 md:p-10">
         <SectionHeader
           eyebrow="Product"
           title="Configure a piece (interactive demo)"
@@ -34,7 +34,7 @@ export default function Configurator() {
         />
 
         <div className="grid gap-6 md:grid-cols-2">
-          <Card className="border-white/10 bg-white/5">
+          <Card className="border-foreground/10 bg-foreground/5">
             <CardHeader>
               <CardTitle>Parameters</CardTitle>
             </CardHeader>
@@ -75,8 +75,8 @@ export default function Configurator() {
                 <div className="mt-3">
                   <Slider value={detail} onValueChange={setDetail} max={100} step={1} />
                 </div>
-                <p className="mt-2 text-xs text-white/60">
-                  Detail: <span className="text-white/80">{detail[0]}</span>/100
+                <p className="mt-2 text-xs text-foreground/60">
+                  Detail: <span className="text-foreground/80">{detail[0]}</span>/100
                 </p>
               </div>
 
@@ -99,12 +99,12 @@ export default function Configurator() {
             </CardContent>
           </Card>
 
-          <Card className="border-white/10 bg-white/5">
+          <Card className="border-foreground/10 bg-foreground/5">
             <CardHeader>
               <CardTitle>Summary</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="overflow-hidden rounded-2xl border border-white/10">
+              <div className="overflow-hidden rounded-2xl border border-foreground/10">
                 <img src="/image.jpg" alt="Preview placeholder" className="h-52 w-full object-cover" />
               </div>
 
@@ -115,7 +115,7 @@ export default function Configurator() {
                 <Badge variant="secondary">{useCase}</Badge>
               </div>
 
-              <p className="text-sm text-white/70">{summary.note}</p>
+              <p className="text-sm text-foreground/70">{summary.note}</p>
 
               <Button className="w-full rounded-2xl" asChild>
                 <a href="#contact">Request a proposal</a>

@@ -14,7 +14,7 @@ const ITEMS = [
 export default function Portfolio() {
   return (
     <section className="relative mx-auto max-w-6xl px-6 py-12">
-      <div className="rounded-4xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/20 md:p-10">
+      <div className="rounded-4xl border border-foreground/10 bg-foreground/5 p-6 shadow-2xl shadow-black/20 md:p-10">
         <SectionHeader
           eyebrow="Portfolio"
           title="Use cases and applications"
@@ -23,14 +23,14 @@ export default function Portfolio() {
 
         <div className="grid gap-4 md:grid-cols-3">
           {ITEMS.map((it) => (
-            <Card key={it.title} className="overflow-hidden border-white/10 bg-white/5">
+            <Card key={it.title} className="overflow-hidden border-foreground/10 bg-foreground/5">
               <img src="/image.jpg" alt="Case study placeholder" className="h-40 w-full object-cover" />
               <CardContent className="p-5">
                 <div className="flex items-start justify-between gap-3">
                   <p className="font-semibold">{it.title}</p>
                   <Badge variant="secondary">{it.tag}</Badge>
                 </div>
-                <p className="mt-2 text-sm text-white/70">
+                <p className="mt-2 text-sm text-foreground/70">
                   Short case summary: objective, environment, and aesthetic/functional result.
                 </p>
               </CardContent>
