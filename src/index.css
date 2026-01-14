@@ -118,24 +118,6 @@
     @apply border-border outline-ring/50;
   }
 
-  @keyframes brand-marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-
-  .brand-marquee {
-    animation: brand-marquee 20s linear infinite;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .brand-marquee {
-      animation: none;
-    }
-  }
   html,
   body {
     scroll-behavior: smooth;

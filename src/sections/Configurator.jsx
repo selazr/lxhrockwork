@@ -28,7 +28,7 @@ export default function Configurator() {
           desc="Experiencia con proyectos de hospitalidad, entretenimiento y espacios públicos en todo tipo de escalas."
         />
 
-        <div className="mt-8 grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
+        <div className="mt-8 grid gap-6 md:grid-cols-[1.05fr_0.95fr]">
           <div className="rounded-3xl border border-foreground/10 bg-background/40 p-6">
             <h3 className="text-lg font-semibold text-foreground">Clientes destacados</h3>
             <p className="mt-2 text-sm text-foreground/70">
@@ -47,18 +47,27 @@ export default function Configurator() {
           <div className="rounded-3xl border border-foreground/10 bg-background/40 p-6">
             <h3 className="text-lg font-semibold text-foreground">Marcas aliadas</h3>
             <p className="mt-2 text-sm text-foreground/70">
-              Una cinta continua con algunas de las marcas que han confiado en nuestro trabajo.
+              Una selección de marcas reconocidas con las que hemos desarrollado experiencias únicas.
             </p>
-            <div className="mt-5 overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/5 py-4">
-              <div className="brand-marquee flex items-center gap-8 px-6">
-                {[...brands, ...brands].map((brand, index) => (
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              {brands.map((brand) => (
+                <div
+                  key={brand.name}
+                  className="flex items-center justify-center rounded-2xl border border-foreground/10 bg-foreground/5 px-4 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-foreground/10"
+                >
                   <img
-                    key={`${brand.name}-${index}`}
                     src={brand.src}
                     alt={`${brand.name} logo`}
-                    className="h-12 w-28 flex-none object-contain opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0"
+                    className="h-10 w-28 object-contain opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0"
                   />
-                ))}
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 rounded-2xl border border-foreground/10 bg-background/60 p-4">
+              <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-foreground/70">
+                <span className="font-semibold text-foreground">+120 proyectos entregados</span>
+                <span>Hospitalidad, ocio y espacios públicos</span>
+                <span>LatAm y EE.UU.</span>
               </div>
             </div>
           </div>
