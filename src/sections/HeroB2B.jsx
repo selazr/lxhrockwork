@@ -52,7 +52,7 @@ export default function HeroB2B() {
         >
           <div className="relative overflow-hidden rounded-2xl border border-foreground/10">
             <img
-              src="/image.jpg"
+              src="/ROCK2.png"
               alt="Featured project placeholder"
               className="h-72 w-full object-cover md:h-80"
             />
@@ -60,23 +60,23 @@ export default function HeroB2B() {
             <div className="absolute bottom-4 left-4 right-4">
               <p className="text-sm font-semibold">Featured project</p>
               <p className="text-xs text-foreground/70">
-                Replace /public/image.jpg with a real render or photo.
+                Custom rockwork wall and themed toucan figure, fully designed and fabricated by LXHROCKWORK.
               </p>
             </div>
           </div>
 
           <div className="mt-4 grid grid-cols-3 gap-3">
             <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
-              <p className="text-xs text-foreground/60">Custom</p>
-              <p className="mt-1 text-lg font-semibold">Shape / scale</p>
+              <p className="text-xs text-foreground/60">Scope</p>
+              <p className="mt-1 text-lg font-semibold">Rockwork / Theming elements</p>
             </div>
             <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
-              <p className="text-xs text-foreground/60">Weight</p>
-              <p className="mt-1 text-lg font-semibold">Optimized</p>
+              <p className="text-xs text-foreground/60">Build</p>
+              <p className="mt-1 text-lg font-semibold">Sculped & painted</p>
             </div>
             <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
               <p className="text-xs text-foreground/60">Delivery</p>
-              <p className="mt-1 text-lg font-semibold">Ready to install</p>
+              <p className="mt-1 text-lg font-semibold">Design / Fabrication / Install</p>
             </div>
           </div>
         </motion.div>

@@ -10,7 +10,7 @@ const clients = [
 ];
 
 const brands = [
-  { name: "Marriott", src: "/brands/brand-marriott.svg" },
+  { name: "Marriott", src: "/brands/iberostar.svg" },
   { name: "Hilton", src: "/brands/brand-hilton.svg" },
   { name: "Four Seasons", src: "/brands/brand-four-seasons.svg" },
   { name: "Disney", src: "/brands/brand-disney.svg" },

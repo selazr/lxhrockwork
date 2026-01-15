@@ -24,7 +24,7 @@ export default function Portfolio() {
         <div className="grid gap-4 md:grid-cols-3">
           {ITEMS.map((it) => (
             <Card key={it.title} className="overflow-hidden border-foreground/10 bg-foreground/5">
-              <img src="/image.jpg" alt="Case study placeholder" className="h-40 w-full object-cover" />
+              <img src="/ROCK3.png" alt="Case study placeholder" className="h-40 w-full object-cover" />
               <CardContent className="p-5">
                 <div className="flex items-start justify-between gap-3">
                   <p className="font-semibold">{it.title}</p>
