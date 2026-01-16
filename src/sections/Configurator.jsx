@@ -58,7 +58,7 @@ export default function Configurator() {
                   <img
                     src={brand.src}
                     alt={`${brand.name} logo`}
-                    className="h-10 w-28 object-contain opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0"
+                    className="h-10 w-28 object-contain opacity-90 grayscale transition hover:opacity-100 hover:grayscale-0 dark:opacity-100 filter brightness-90 contrast-110 dark:brightness-125 dark:contrast-125 dark:saturate-110"
                   />
                 </div>
               ))}
