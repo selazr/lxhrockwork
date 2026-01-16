@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">LXH Rockwork</title>
+  <desc id="desc">LXH Rockwork monogram logo</desc>
+  <rect width="512" height="512" rx="96" fill="currentColor" />
+  <g fill="#ffffff">
+    <path d="M146 164h36v184h-36z" />
+    <path d="M182 348h76v-32h-40V164h-36z" />
+    <path d="M266 164h36v72l56-72h42l-72 90 74 94h-44l-56-74v74h-36z" />
+    <path d="M146 374h220v-28H146z" />
+  </g>
+</svg>
