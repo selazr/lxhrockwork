@@ -31,6 +31,11 @@ export default function App() {
     window.document.documentElement.classList.toggle("dark", isDark);
   }, [isDark]);
 
+  const logoClassName = [
+    "h-full w-full rounded-xl object-contain transition duration-300",
+    isDark ? "brightness-110 contrast-110" : "brightness-95 contrast-105",
+  ].join(" ");
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Background accents */}
@@ -45,9 +50,9 @@ export default function App() {
           <div className="flex items-center gap-3">
             <div className="h-11 w-11 rounded-2xl border border-foreground/10 bg-foreground/5 p-2 shadow-lg shadow-black/30">
               <img
-                src="/image.jpg"
+                src="/lxhrockwork-logo.svg"
                 alt="LXH Rockwork logo"
-                className="h-full w-full rounded-xl object-cover"
+                className={logoClassName}
               />
             </div>
             <div>
