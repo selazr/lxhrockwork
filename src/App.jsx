@@ -56,7 +56,11 @@ export default function App() {
               />
             </div>
             <div>
-              <p className="text-sm font-semibold leading-none">LXH Rockwork</p>
+              <img
+                src="/lxhrockwork.svg"
+                alt="LXH Rockwork"
+                className="h-6 w-auto"
+              />
               <p className="text-xs text-foreground/60">Theming · Design · Structures</p>
             </div>
           </div>
