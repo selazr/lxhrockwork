@@ -50,7 +50,7 @@ export default function App() {
           <div className="flex items-center gap-3">
             <div className="h-11 w-11 rounded-2xl border border-foreground/10 bg-foreground/5 p-2 shadow-lg shadow-black/30">
               <img
-                src="/lxhrockwork-logo.svg"
+                src="/lxhrockwork.svg"
                 alt="LXH Rockwork logo"
                 className={logoClassName}
               />
