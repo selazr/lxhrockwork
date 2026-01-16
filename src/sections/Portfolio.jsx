@@ -8,8 +8,8 @@ export default function Portfolio() {
       <div className="rounded-4xl border border-foreground/10 bg-foreground/5 p-6 shadow-2xl shadow-black/20 md:p-10">
         <SectionHeader
           eyebrow="Portfolio"
-          title="Use cases and applications"
-          desc="Replace these placeholders with real projects when available."
+          title="Use cases for artificial rockwork"
+          desc="From themed attractions to hospitality, see how engineered rockwork elevates guest experiences."
         />
 
         <div className="grid gap-4 md:grid-cols-3">
@@ -21,7 +21,7 @@ export default function Portfolio() {
                 <Badge variant="secondary">Outdoor</Badge>
               </div>
               <p className="mt-2 text-sm text-foreground/70">
-              Immersive rockwork integrated with rides, water features, and high-traffic outdoor environments.
+                Immersive rockwork integrated with rides, water features, and high-traffic outdoor environments.
               </p>
             </CardContent>
           </Card>
@@ -33,7 +33,7 @@ export default function Portfolio() {
                 <Badge variant="secondary">Premium</Badge>
               </div>
               <p className="mt-2 text-sm text-foreground/70">
-              Architectural rockwork and themed façades designed to enhance premium leisure experiences.
+                Architectural rockwork and themed façades designed to enhance premium leisure experiences.
               </p>
             </CardContent>
           </Card>
@@ -45,7 +45,8 @@ export default function Portfolio() {
                 <Badge variant="secondary">Indoor</Badge>
               </div>
               <p className="mt-2 text-sm text-foreground/70">
-Indoor themed environments that transform retail spaces into engaging brand experiences.              </p>
+                Indoor themed environments that transform retail spaces into engaging brand experiences.
+              </p>
             </CardContent>
           </Card>
           <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
@@ -56,7 +57,8 @@ Indoor themed environments that transform retail spaces into engaging brand expe
                 <Badge variant="secondary">Temporary</Badge>
               </div>
               <p className="mt-2 text-sm text-foreground/70">
-              Custom rockwork walls and themed figures created for temporary or seasonal installations.              </p>
+                Custom rockwork walls and themed figures created for temporary or seasonal installations.
+              </p>
             </CardContent>
           </Card>
           <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
@@ -67,7 +69,8 @@ Indoor themed environments that transform retail spaces into engaging brand expe
                 <Badge variant="secondary">Detail</Badge>
               </div>
               <p className="mt-2 text-sm text-foreground/70">
-              Large-scale sculpted landscapes combining visual impact, durability, and walkable detail.              </p>
+                Large-scale sculpted landscapes combining visual impact, durability, and walkable detail.
+              </p>
             </CardContent>
           </Card>
           <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
@@ -78,7 +81,8 @@ Indoor themed environments that transform retail spaces into engaging brand expe
                 <Badge variant="secondary">Wet area</Badge>
               </div>
               <p className="mt-2 text-sm text-foreground/70">
-              Artificial rock environments designed for spas, pools, and controlled wet areas.              </p>
+                Artificial rock environments designed for spas, pools, and controlled wet areas.
+              </p>
             </CardContent>
           </Card>
         </div>

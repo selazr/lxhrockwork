@@ -11,7 +11,7 @@ export default function CTA() {
         <SectionHeader
           eyebrow="Contact"
           title="Request a proposal"
-          desc="Form demo without backend (for now). Later we can connect it to email, CRM, or your workflow."
+          desc="Share your project details and our rockwork team will follow up with scope, timeline, and budget guidance."
         />
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -30,10 +30,10 @@ export default function CTA() {
                 <Input className="mt-2" placeholder="What do you need to theme, dimensions, environment..." />
               </div>
 
-              <Button className="w-full rounded-2xl">Send request (demo)</Button>
+              <Button className="w-full rounded-2xl">Send request</Button>
 
               <p className="text-xs text-foreground/50">
-                In a SPA without a backend, this can open mailto:, store locally, or integrate later.
+                This form can connect to email, a CRM, or your preferred workflow once ready.
               </p>
             </CardContent>
           </Card>
