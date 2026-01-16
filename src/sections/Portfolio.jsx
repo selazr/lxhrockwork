@@ -14,26 +14,26 @@ export default function Portfolio() {
 
         <div className="grid gap-4 md:grid-cols-3">
           <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
-            <img src="/ROCK3.png" alt="Theme park case study" className="h-40 w-full object-cover" />
+            <img src="/ROCK6.png" alt="Theme park case study" className="h-40 w-full object-cover" />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
                 <p className="font-semibold">Theme park</p>
                 <Badge variant="secondary">Outdoor</Badge>
               </div>
               <p className="mt-2 text-sm text-foreground/70">
-                Short case summary: objective, environment, and aesthetic/functional result.
+              Immersive rockwork integrated with rides, water features, and high-traffic outdoor environments.
               </p>
             </CardContent>
           </Card>
           <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
-            <img src="/ROCK2.png" alt="Hotel resort case study" className="h-40 w-full object-cover" />
+            <img src="/ROCK4.png" alt="Hotel resort case study" className="h-40 w-full object-cover" />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
                 <p className="font-semibold">Hotel / resort</p>
                 <Badge variant="secondary">Premium</Badge>
               </div>
               <p className="mt-2 text-sm text-foreground/70">
-                Short case summary: objective, environment, and aesthetic/functional result.
+              Architectural rockwork and themed façades designed to enhance premium leisure experiences.
               </p>
             </CardContent>
           </Card>
@@ -45,44 +45,40 @@ export default function Portfolio() {
                 <Badge variant="secondary">Indoor</Badge>
               </div>
               <p className="mt-2 text-sm text-foreground/70">
-                Short case summary: objective, environment, and aesthetic/functional result.
-              </p>
+Indoor themed environments that transform retail spaces into engaging brand experiences.              </p>
             </CardContent>
           </Card>
           <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
-            <img src="/image.jpg" alt="Event booth case study" className="h-40 w-full object-cover" />
+            <img src="/ROCK2.png" alt="Event booth case study" className="h-40 w-full object-cover" />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
-                <p className="font-semibold">Event / booth</p>
+                <p className="font-semibold">Event / Restaurant</p>
                 <Badge variant="secondary">Temporary</Badge>
               </div>
               <p className="mt-2 text-sm text-foreground/70">
-                Short case summary: objective, environment, and aesthetic/functional result.
-              </p>
+              Custom rockwork walls and themed figures created for temporary or seasonal installations.              </p>
             </CardContent>
           </Card>
           <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
-            <img src="/image.jpg" alt="Museum exhibit case study" className="h-40 w-full object-cover" />
+            <img src="/ROCK5.png" alt="Minigolf & Mountains" className="h-40 w-full object-cover" />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
-                <p className="font-semibold">Museum exhibit</p>
+                <p className="font-semibold">Minigolf / Mountain</p>
                 <Badge variant="secondary">Detail</Badge>
               </div>
               <p className="mt-2 text-sm text-foreground/70">
-                Short case summary: objective, environment, and aesthetic/functional result.
-              </p>
+              Large-scale sculpted landscapes combining visual impact, durability, and walkable detail.              </p>
             </CardContent>
           </Card>
           <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
-            <img src="/image.jpg" alt="Wellness zone case study" className="h-40 w-full object-cover" />
+            <img src="/ROCK3.png" alt="Wellness zone case study" className="h-40 w-full object-cover" />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
                 <p className="font-semibold">Wellness zone</p>
                 <Badge variant="secondary">Wet area</Badge>
               </div>
               <p className="mt-2 text-sm text-foreground/70">
-                Short case summary: objective, environment, and aesthetic/functional result.
-              </p>
+              Artificial rock environments designed for spas, pools, and controlled wet areas.              </p>
             </CardContent>
           </Card>
         </div>

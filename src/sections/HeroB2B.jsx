@@ -52,7 +52,7 @@ export default function HeroB2B() {
         >
           <div className="relative overflow-hidden rounded-2xl border border-foreground/10">
             <img
-              src="/ROCK2.png"
+              src="/ROCK0.png"
               alt="Featured project placeholder"
               className="h-72 w-full object-cover md:h-80"
             />
@@ -60,7 +60,7 @@ export default function HeroB2B() {
             <div className="absolute bottom-4 left-4 right-4">
               <p className="text-sm font-semibold">Featured project</p>
               <p className="text-xs text-foreground/70">
-                Custom rockwork wall and themed toucan figure, fully designed and fabricated by LXHROCKWORK.
+              Immersive artificial rockwork environment, fully designed and fabricated by LXH Rockwork.
               </p>
             </div>
           </div>
@@ -68,15 +68,15 @@ export default function HeroB2B() {
           <div className="mt-4 grid grid-cols-3 gap-3">
             <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
               <p className="text-xs text-foreground/60">Scope</p>
-              <p className="mt-1 text-lg font-semibold">Rockwork / Theming elements</p>
+              <p className="mt-1 text-lg font-semibold">Rockwork</p>
             </div>
             <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
               <p className="text-xs text-foreground/60">Build</p>
-              <p className="mt-1 text-lg font-semibold">Sculped & painted</p>
+              <p className="mt-1 text-lg font-semibold">Sculpted & painted</p>
             </div>
             <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
               <p className="text-xs text-foreground/60">Delivery</p>
-              <p className="mt-1 text-lg font-semibold">Design / Fabrication / Install</p>
+              <p className="mt-1 text-lg font-semibold">Fabrication & Install</p>
             </div>
           </div>
         </motion.div>

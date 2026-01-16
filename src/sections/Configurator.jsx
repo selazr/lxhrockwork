@@ -11,11 +11,11 @@ const clients = [
 
 const brands = [
   { name: "Marriott", src: "/brands/iberostar.svg" },
-  { name: "Hilton", src: "/brands/brand-hilton.svg" },
-  { name: "Four Seasons", src: "/brands/brand-four-seasons.svg" },
-  { name: "Disney", src: "/brands/brand-disney.svg" },
-  { name: "Hard Rock", src: "/brands/brand-hard-rock.svg" },
-  { name: "MGM", src: "/brands/brand-mgm.svg" },
+  { name: "Hilton", src: "/brands/KatmanduPark.png" },
+  { name: "Four Seasons", src: "/brands/RCI_Flag.svg" },
+  { name: "Disney", src: "/brands/santguli.svg" },
+  { name: "Hard Rock", src: "/brands/Pairi.png" },
+  { name: "MGM", src: "/brands/central-forest-logo.png" },
 ];
 
 export default function Configurator() {
