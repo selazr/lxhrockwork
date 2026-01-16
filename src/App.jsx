@@ -85,14 +85,14 @@ export default function App() {
               onClick={() => setTheme(isDark ? "light" : "dark")}
               className="flex items-center gap-2 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-foreground/80 hover:bg-foreground/10"
             >
-              Tema
+              Theme
               {isDark ? (
                 <Moon className="h-4 w-4" aria-hidden="true" />
               ) : (
                 <Sun className="h-4 w-4" aria-hidden="true" />
               )}
               <span className="sr-only">
-                {isDark ? "Oscuro" : "Claro"}
+                {isDark ? "Dark" : "Light"}
               </span>
             </button>
             <a
