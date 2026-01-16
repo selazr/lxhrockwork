@@ -32,8 +32,12 @@ export default function App() {
   }, [isDark]);
 
   const logoClassName = [
-    "h-full w-full rounded-xl object-contain transition duration-300",
+    "block h-7 w-auto object-contain transition duration-300 sm:h-9",
     isDark ? "brightness-110 contrast-110" : "brightness-95 contrast-105",
+  ].join(" ");
+  const wordmarkClassName = [
+    "block h-7 w-auto object-contain transition duration-300 sm:h-9",
+    isDark ? "brightness-110 contrast-110" : "brightness-100 contrast-105",
   ].join(" ");
 
   return (
@@ -47,19 +51,17 @@ export default function App() {
 
       <header className="relative mx-auto max-w-6xl px-6 py-8">
         <nav className="flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="h-11 w-11 rounded-2xl border border-foreground/10 bg-foreground/5 p-2 shadow-lg shadow-black/30">
-              <img
-                src="/lxhrockwork-logo.svg"
-                alt="LXH Rockwork logo"
-                className={logoClassName}
-              />
-            </div>
+          <div className="flex items-center gap-[10px] rounded-[10px] border border-black/10 bg-black/5 px-2 py-1.5 shadow-[0_6px_18px_rgba(0,0,0,0.08)] backdrop-blur-[10px] dark:border-white/15 dark:bg-white/10 sm:rounded-[12px] sm:px-2.5 sm:py-2">
+            <img
+              src="/lxhrockwork-logo.svg"
+              alt="LXH Rockwork logo"
+              className={logoClassName}
+            />
             <div>
               <img
                 src="/lxhrockwork.svg"
                 alt="LXH Rockwork"
-                className="h-6 w-auto"
+                className={wordmarkClassName}
               />
               <p className="text-xs text-foreground/60">Theming · Design · Structures</p>
             </div>
