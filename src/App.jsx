@@ -31,10 +31,8 @@ export default function App() {
     window.document.documentElement.classList.toggle("dark", isDark);
   }, [isDark]);
 
-  const wordmarkClassName = [
-    "block h-7 w-auto object-contain transition duration-300 sm:h-9",
-    isDark ? "brightness-110 contrast-110" : "brightness-100 contrast-105",
-  ].join(" ");
+  const wordmarkClassName =
+    "block h-7 w-auto object-contain transition duration-300 sm:h-9";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -50,7 +48,7 @@ export default function App() {
           <div className="flex items-center rounded-[10px] border border-black/10 bg-black/5 px-2 py-1.5 shadow-[0_6px_18px_rgba(0,0,0,0.08)] backdrop-blur-[10px] dark:border-white/15 dark:bg-white/10 sm:rounded-[12px] sm:px-2.5 sm:py-2">
             <div>
               <img
-                src="/lxhrockwork.svg"
+                src={isDark ? "/lxhrockwork-dark.svg" : "/lxhrockwork.svg"}
                 alt="LXH Rockwork"
                 className={wordmarkClassName}
               />
