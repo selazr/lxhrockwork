@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" role="img" aria-label="LXH ROCKWORK INC.">
+  <g fill="none">
+    <text
+      x="60" y="130"
+      fill="#F8FAFC"
+      font-family="Montserrat, Poppins, Arial, Helvetica, sans-serif"
+      font-size="96"
+      font-weight="800"
+      letter-spacing="2"
+      dominant-baseline="middle">
+      LXH ROCKWORK
+    </text>
+
+    <text
+      x="920" y="130"
+      fill="#9CBF1A"
+      font-family="Montserrat, Poppins, Arial, Helvetica, sans-serif"
+      font-size="96"
+      font-weight="800"
+      letter-spacing="1"
+      dominant-baseline="middle">
+      INC.
+    </text>
+  </g>
+</svg>
