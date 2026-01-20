@@ -67,18 +67,18 @@ export default function Configurator() {
             <p className="mt-2 text-sm text-foreground/70">
               A selection of recognized brands we have helped deliver unique experiences for.
             </p>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
               {brands.map((brand) => (
                 <div
                   key={brand.name}
-                  className={`flex items-center justify-center rounded-2xl border border-foreground/10 bg-muted/70 px-4 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-muted/80 dark:bg-white/10 dark:hover:bg-white/15 ${
+                  className={`flex items-center justify-center rounded-2xl border border-foreground/10 bg-muted/70 px-3 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-muted/80 dark:bg-white/10 dark:hover:bg-white/15 sm:px-4 sm:py-6 ${
                     brand.tileClassName ?? ""
                   }`}
                 >
                   <img
                     src={brand.src}
                     alt={`${brand.name} logo`}
-                    className="h-10 w-28 object-contain opacity-90 grayscale transition hover:opacity-100 filter brightness-0 contrast-100 dark:invert dark:brightness-200 dark:contrast-100"
+                    className="h-8 w-24 object-contain opacity-90 grayscale transition hover:opacity-100 filter brightness-0 contrast-100 dark:invert dark:brightness-200 dark:contrast-100 sm:h-10 sm:w-28"
                   />
                 </div>
               ))}
