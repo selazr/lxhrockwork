@@ -10,19 +10,27 @@ const clients = [
 ];
 
 const brands = [
-  { name: "Marriott", src: "/brands/iberostar.svg" },
+  {
+    name: "Marriott",
+    src: "/brands/iberostar.svg",
+    className: "dark:brightness-125 dark:contrast-110",
+  },
   {
     name: "Hilton",
     src: "/brands/KatmanduPark.png",
-    className: "brightness-60 contrast-125 dark:brightness-110",
+    className: "brightness-75 contrast-125 dark:brightness-110",
   },
-  { name: "Four Seasons", src: "/brands/RCI_Flag.svg" },
+  {
+    name: "Four Seasons",
+    src: "/brands/RCI_Flag.svg",
+    className: "dark:brightness-125 dark:contrast-110",
+  },
   { name: "Disney", src: "/brands/santguli.svg" },
   { name: "Hard Rock", src: "/brands/Pairi.png" },
   {
     name: "MGM",
     src: "/brands/central-forest-logo.png",
-    className: "brightness-60 contrast-125 dark:brightness-110",
+    className: "brightness-70 contrast-130 dark:brightness-110",
   },
 ];
 
