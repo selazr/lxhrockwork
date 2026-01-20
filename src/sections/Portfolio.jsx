@@ -14,7 +14,11 @@ export default function Portfolio() {
 
         <div className="grid gap-4 md:grid-cols-3">
           <Card className="overflow-hidden border-foreground/10 bg-muted/50 dark:bg-foreground/5">
-            <img src="/ROCK6.png" alt="Theme park case study" className="h-40 w-full object-cover" />
+            <img
+              src="/ROCK6.png"
+              alt="Theme park case study"
+              className="aspect-[4/3] w-full h-auto object-cover"
+            />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
                 <p className="font-semibold">Theme park</p>
@@ -26,7 +30,11 @@ export default function Portfolio() {
             </CardContent>
           </Card>
           <Card className="overflow-hidden border-foreground/10 bg-muted/50 dark:bg-foreground/5">
-            <img src="/ROCK4.png" alt="Hotel resort case study" className="h-40 w-full object-cover" />
+            <img
+              src="/ROCK4.png"
+              alt="Hotel resort case study"
+              className="aspect-[4/3] w-full h-auto object-cover"
+            />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
                 <p className="font-semibold">Hotel / resort</p>
@@ -38,7 +46,11 @@ export default function Portfolio() {
             </CardContent>
           </Card>
           <Card className="overflow-hidden border-foreground/10 bg-muted/50 dark:bg-foreground/5">
-            <img src="/ROCK.jpeg" alt="Experiential retail case study" className="h-40 w-full object-cover" />
+            <img
+              src="/ROCK.jpeg"
+              alt="Experiential retail case study"
+              className="aspect-[4/3] w-full h-auto object-cover"
+            />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
                 <p className="font-semibold">Experiential retail</p>
@@ -50,7 +62,11 @@ export default function Portfolio() {
             </CardContent>
           </Card>
           <Card className="overflow-hidden border-foreground/10 bg-muted/50 dark:bg-foreground/5">
-            <img src="/ROCK2.png" alt="Event booth case study" className="h-40 w-full object-cover" />
+            <img
+              src="/ROCK2.png"
+              alt="Event booth case study"
+              className="aspect-[4/3] w-full h-auto object-cover"
+            />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
                 <p className="font-semibold">Event / Restaurant</p>
@@ -62,7 +78,11 @@ export default function Portfolio() {
             </CardContent>
           </Card>
           <Card className="overflow-hidden border-foreground/10 bg-muted/50 dark:bg-foreground/5">
-            <img src="/ROCK5.png" alt="Minigolf & Mountains" className="h-40 w-full object-cover" />
+            <img
+              src="/ROCK5.png"
+              alt="Minigolf & Mountains"
+              className="aspect-[4/3] w-full h-auto object-cover"
+            />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
                 <p className="font-semibold">Minigolf / Mountain</p>
@@ -74,7 +94,11 @@ export default function Portfolio() {
             </CardContent>
           </Card>
           <Card className="overflow-hidden border-foreground/10 bg-muted/50 dark:bg-foreground/5">
-            <img src="/ROCK3.png" alt="Wellness zone case study" className="h-40 w-full object-cover" />
+            <img
+              src="/ROCK3.png"
+              alt="Wellness zone case study"
+              className="aspect-[4/3] w-full h-auto object-cover"
+            />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
                 <p className="font-semibold">Wellness zone</p>
