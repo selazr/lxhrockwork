@@ -16,28 +16,28 @@ export default function Process() {
             <AccordionItem value="step-1">
               <AccordionTrigger>1) Briefing and requirements</AccordionTrigger>
               <AccordionContent className="text-foreground/70">
-                We define goals, location, environment (indoor/outdoor/wet), dimensions, and the desired look.
+                We align on goals, site conditions (indoor/outdoor/wet), dimensions, and the intended look.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="step-2">
               <AccordionTrigger>2) Design and proposal</AccordionTrigger>
               <AccordionContent className="text-foreground/70">
-                Visual concept, modular breakdown if needed, finishes, and installation criteria.
+                We deliver a visual concept, modular breakdown if needed, finish selections, and installation criteria.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="step-3">
               <AccordionTrigger>3) Fabrication</AccordionTrigger>
               <AccordionContent className="text-foreground/70">
-                Production of engineered pieces with texture and geometry per approved design.
+                We produce engineered pieces with the approved textures, geometry, and structural detailing.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="step-4">
               <AccordionTrigger>4) Installation and handoff</AccordionTrigger>
               <AccordionContent className="text-foreground/70">
-                Planned assembly, visual QA, and final project close-out.
+                We coordinate assembly, confirm visual quality, and close out the project with documentation.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

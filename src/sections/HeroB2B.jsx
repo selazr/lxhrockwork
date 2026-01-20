@@ -13,7 +13,7 @@ export default function HeroB2B() {
             transition={{ duration: 0.5 }}
             className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl"
           >
-            Custom artificial rockwork for immersive theming, architectural design, and structural impact.
+            Custom artificial rockwork that supports immersive theming, architectural design, and structural performance.
           </motion.h1>
 
           <motion.p
@@ -22,8 +22,8 @@ export default function HeroB2B() {
             transition={{ duration: 0.5, delay: 0.08 }}
             className="mt-4 text-base text-foreground/70"
           >
-            We fabricate lightweight, engineered rockwork pieces in the exact
-            shape and size you need, optimized for fast installation, safe
+            We fabricate lightweight, engineered rockwork in the exact shape and
+            scale you need, with planning that supports fast installation, safe
             loads, and long-term durability.
           </motion.p>
 
@@ -60,7 +60,7 @@ export default function HeroB2B() {
             <div className="absolute bottom-4 left-4 right-4">
               <p className="text-sm font-semibold">Featured project</p>
               <p className="text-xs text-foreground/70">
-                Immersive artificial rockwork environment, fully designed and fabricated by LXH Rockwork.
+                An immersive rockwork environment designed, engineered, and fabricated end-to-end by LXH Rockwork.
               </p>
             </div>
           </div>

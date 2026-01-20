@@ -50,7 +50,7 @@ export default function Configurator() {
           <div className="rounded-3xl border border-foreground/10 bg-muted/40 p-6 dark:bg-background/40">
             <h3 className="text-lg font-semibold text-foreground">Featured clients</h3>
             <p className="mt-2 text-sm text-foreground/70">
-              We collaborate with creative teams, operators, and developers who pursue memorable experiences.
+              We partner with creative teams, operators, and developers to deliver memorable guest experiences.
             </p>
             <ul className="mt-4 space-y-3 text-sm text-foreground/80">
               {clients.map((client) => (
@@ -65,7 +65,7 @@ export default function Configurator() {
           <div className="rounded-3xl border border-foreground/10 bg-muted/40 p-6 dark:bg-background/40">
             <h3 className="text-lg font-semibold text-foreground">Partner brands</h3>
             <p className="mt-2 text-sm text-foreground/70">
-              A selection of recognized brands we have helped deliver unique experiences for.
+              A selection of recognized brands that have trusted us to bring unique experiences to life.
             </p>
             <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
               {brands.map((brand) => (
@@ -87,7 +87,7 @@ export default function Configurator() {
               <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-foreground/70">
                 <span className="font-semibold text-foreground">120+ projects delivered</span>
                 <span>Hospitality, leisure, and public spaces</span>
-                <span>LatAm and U.S.</span>
+                <span>Latin America and the U.S.</span>
               </div>
             </div>
           </div>

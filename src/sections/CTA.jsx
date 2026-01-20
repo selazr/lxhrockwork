@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export default function CTA() {
-  // Mejor: usar variables de entorno del bundler (Vite/Next/etc.)
+  // Prefer bundler environment variables (Vite/Next/etc.)
   const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
   const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -67,7 +67,7 @@ export default function CTA() {
           company: formValues.company,
           email: formValues.email,
           summary: formValues.summary,
-          reply_to: formValues.email, // útil si lo usas en el template
+          reply_to: formValues.email, // useful if you use it in the EmailJS template
         },
         { publicKey: EMAILJS_PUBLIC_KEY },
       );
@@ -131,7 +131,7 @@ export default function CTA() {
                     id="summary"
                     name="summary"
                     className="mt-2"
-                    placeholder="What do you need to theme, dimensions, environment..."
+                    placeholder="Describe what you need themed, the dimensions, and the environment."
                     value={formValues.summary}
                     onChange={handleChange("summary")}
                     required
@@ -173,10 +173,10 @@ export default function CTA() {
           <div className="rounded-3xl border border-foreground/10 bg-muted/50 p-6 dark:bg-foreground/5">
             <p className="text-sm font-semibold">What to include</p>
             <ul className="mt-3 space-y-2 text-sm text-foreground/70">
-              <li>• Location: indoor/outdoor/wet</li>
-              <li>• Approximate dimensions</li>
-              <li>• Visual references (rock style)</li>
-              <li>• Target timeline</li>
+              <li>• Location details (indoor, outdoor, or wet areas)</li>
+              <li>• Approximate dimensions or footprint</li>
+              <li>• Visual references for rock style</li>
+              <li>• Target timeline and milestones</li>
             </ul>
 
             <div className="mt-6">
@@ -202,7 +202,7 @@ export default function CTA() {
               type="button"
               onClick={() => setIsSuccessOpen(false)}
             >
-              Entendido
+              Got it
             </Button>
           </DialogFooter>
         </DialogContent>
