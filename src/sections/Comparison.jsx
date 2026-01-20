@@ -96,7 +96,7 @@ export default function Comparison() {
         </div>
 
         <p className="mt-4 text-xs text-foreground/50">
-          Note: this highlights relative advantages without committing to specific figures. We can add ranges once defined.
+          Note: this highlights relative advantages without specific figures; we can add ranges once the scope is defined.
         </p>
       </div>
     </section>
