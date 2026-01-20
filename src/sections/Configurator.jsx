@@ -13,32 +13,26 @@ const brands = [
   {
     name: "Marriott",
     src: "/brands/iberostar.svg",
-    className: "brightness-90 contrast-125 dark:invert dark:brightness-110",
   },
   {
     name: "Hilton",
     src: "/brands/KatmanduPark.png",
-    className: "brightness-85 contrast-125 dark:brightness-115 dark:contrast-110",
   },
   {
     name: "Four Seasons",
     src: "/brands/RCI_Flag.svg",
-    className: "brightness-90 contrast-120 dark:invert dark:brightness-110",
   },
   {
     name: "Disney",
     src: "/brands/santguli.svg",
-    className: "brightness-85 contrast-125 dark:brightness-110",
   },
   {
     name: "Hard Rock",
     src: "/brands/Pairi.png",
-    className: "brightness-90 contrast-120 dark:brightness-110",
   },
   {
     name: "MGM",
     src: "/brands/central-forest-logo.png",
-    className: "brightness-85 contrast-125 dark:invert dark:brightness-110",
   },
 ];
 
@@ -84,9 +78,7 @@ export default function Configurator() {
                   <img
                     src={brand.src}
                     alt={`${brand.name} logo`}
-                    className={`h-10 w-28 object-contain opacity-90 grayscale-0 transition hover:opacity-100 filter brightness-100 contrast-100 dark:brightness-110 dark:contrast-100 ${
-                      brand.className ?? ""
-                    }`}
+                    className="h-10 w-28 object-contain opacity-90 grayscale transition hover:opacity-100 filter brightness-0 contrast-100 dark:invert dark:brightness-200 dark:contrast-100"
                   />
                 </div>
               ))}
