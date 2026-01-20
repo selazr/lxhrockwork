@@ -10,19 +10,31 @@ const clients = [
 ];
 
 const brands = [
-  { name: "Marriott", src: "/brands/iberostar.svg" },
+  {
+    name: "Marriott",
+    src: "/brands/iberostar.svg",
+    className: "dark:invert dark:brightness-110 dark:contrast-110",
+  },
   {
     name: "Hilton",
     src: "/brands/KatmanduPark.png",
-    className: "brightness-60 contrast-125 dark:brightness-110",
+    className:
+      "brightness-95 contrast-110 drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)] dark:brightness-100 dark:contrast-100",
+    tileClassName: "bg-slate-950/90 dark:bg-foreground/5",
   },
-  { name: "Four Seasons", src: "/brands/RCI_Flag.svg" },
+  {
+    name: "Four Seasons",
+    src: "/brands/RCI_Flag.svg",
+    className: "dark:invert dark:brightness-115 dark:contrast-110",
+  },
   { name: "Disney", src: "/brands/santguli.svg" },
   { name: "Hard Rock", src: "/brands/Pairi.png" },
   {
     name: "MGM",
     src: "/brands/central-forest-logo.png",
-    className: "brightness-60 contrast-125 dark:brightness-110",
+    className:
+      "brightness-95 contrast-110 drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)] dark:brightness-100 dark:contrast-100",
+    tileClassName: "bg-slate-950/90 dark:bg-foreground/5",
   },
 ];
 
@@ -61,7 +73,9 @@ export default function Configurator() {
               {brands.map((brand) => (
                 <div
                   key={brand.name}
-                  className="flex items-center justify-center rounded-2xl border border-foreground/10 bg-foreground/5 px-4 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-foreground/10"
+                  className={`flex items-center justify-center rounded-2xl border border-foreground/10 bg-foreground/5 px-4 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-foreground/10 ${
+                    brand.tileClassName ?? ""
+                  }`}
                 >
                   <img
                     src={brand.src}
