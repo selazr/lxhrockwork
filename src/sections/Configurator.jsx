@@ -69,7 +69,9 @@ export default function Configurator() {
               {brands.map((brand) => (
                 <div
                   key={brand.name}
-                  className="flex items-center justify-center rounded-2xl border border-foreground/10 bg-foreground/5 px-4 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-foreground/10"
+                  className={`flex items-center justify-center rounded-2xl border border-foreground/10 bg-foreground/5 px-4 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-foreground/10 ${
+                    brand.tileClassName ?? ""
+                  }`}
                 >
                   <img
                     src={brand.src}
