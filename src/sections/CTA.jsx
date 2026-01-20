@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,11 +7,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export default function CTA() {
-  // TODO: Replace these placeholder values with your EmailJS credentials.
-  // You can create them at https://www.emailjs.com/ (service ID, template ID, public key).
-  const EMAILJS_SERVICE_ID = "REPLACE_WITH_SERVICE_ID";
-  const EMAILJS_TEMPLATE_ID = "REPLACE_WITH_TEMPLATE_ID";
-  const EMAILJS_PUBLIC_KEY = "REPLACE_WITH_PUBLIC_KEY";
+  // Mejor: usar variables de entorno del bundler (Vite/Next/etc.)
+  const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const [formValues, setFormValues] = useState({
     company: "",
@@ -19,49 +19,52 @@ export default function CTA() {
   });
   const [status, setStatus] = useState("idle");
 
-  const isComplete = Object.values(formValues).every((value) => value.trim().length > 0);
+  const isComplete = useMemo(
+    () => Object.values(formValues).every((v) => v.trim().length > 0),
+    [formValues],
+  );
+
+  const isConfigured = Boolean(
+    EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY,
+  );
 
   const handleChange = (field) => (event) => {
     const { value } = event.target;
     setFormValues((prev) => ({ ...prev, [field]: value }));
-    if (status !== "idle") {
-      setStatus("idle");
-    }
+    if (status !== "idle") setStatus("idle");
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     if (!isComplete) {
       setStatus("missing");
       return;
     }
-    setStatus("sending");
 
-    const payload = {
-      service_id: EMAILJS_SERVICE_ID,
-      template_id: EMAILJS_TEMPLATE_ID,
-      user_id: EMAILJS_PUBLIC_KEY,
-      template_params: {
-        company: formValues.company,
-        email: formValues.email,
-        summary: formValues.summary,
-      },
-    };
+    if (!isConfigured) {
+      setStatus("error");
+      console.error("EmailJS is not configured. Missing env vars.");
+      return;
+    }
 
     try {
-      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+      setStatus("sending");
 
-      if (!response.ok) {
-        throw new Error("EmailJS request failed");
-      }
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          company: formValues.company,
+          email: formValues.email,
+          summary: formValues.summary,
+          reply_to: formValues.email, // útil si lo usas en el template
+        },
+        { publicKey: EMAILJS_PUBLIC_KEY },
+      );
 
       setStatus("sent");
+      setFormValues({ company: "", email: "", summary: "" });
     } catch (error) {
       console.error("EmailJS error:", error);
       setStatus("error");
@@ -92,8 +95,10 @@ export default function CTA() {
                     value={formValues.company}
                     onChange={handleChange("company")}
                     required
+                    disabled={status === "sending"}
                   />
                 </div>
+
                 <div>
                   <Label htmlFor="email">Email</Label>
                   <Input
@@ -106,8 +111,10 @@ export default function CTA() {
                     value={formValues.email}
                     onChange={handleChange("email")}
                     required
+                    disabled={status === "sending"}
                   />
                 </div>
+
                 <div>
                   <Label htmlFor="summary">Project summary</Label>
                   <Input
@@ -118,29 +125,35 @@ export default function CTA() {
                     value={formValues.summary}
                     onChange={handleChange("summary")}
                     required
+                    disabled={status === "sending"}
                   />
                 </div>
 
-                <Button className="w-full rounded-2xl" type="submit" disabled={!isComplete}>
-                  Send request
+                <Button
+                  className="w-full rounded-2xl"
+                  type="submit"
+                  disabled={!isComplete || status === "sending"}
+                >
+                  {status === "sending" ? "Sending..." : "Send request"}
                 </Button>
 
                 <p className="text-xs text-foreground/50">
                   {status === "sent"
                     ? "Thanks! Your request is on its way."
-                    : "We use EmailJS to send this form. Add your service/template/key in the CTA component."}
+                    : !isConfigured
+                      ? "Email sending is not configured (missing EmailJS env vars)."
+                      : "This form sends the request via EmailJS."}
                 </p>
+
                 {status === "missing" && (
                   <p className="text-xs text-amber-500" role="alert">
                     Please complete all fields before sending the request.
                   </p>
                 )}
-                {status === "sending" && (
-                  <p className="text-xs text-foreground/60">Sending...</p>
-                )}
+
                 {status === "error" && (
                   <p className="text-xs text-red-500" role="alert">
-                    Something went wrong. Please try again after configuring EmailJS.
+                    Something went wrong sending your request. Please try again.
                   </p>
                 )}
               </form>
