@@ -191,10 +191,9 @@ export default function CTA() {
       <Dialog open={isSuccessOpen} onOpenChange={setIsSuccessOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle>¡Mensaje enviado!</DialogTitle>
+            <DialogTitle>Message sent!</DialogTitle>
             <DialogDescription>
-              Tu solicitud ya está enviada. En breve te contestaremos con los
-              próximos pasos.
+              Your request has been successfully submitted. We’ll get back to you shortly with the next steps.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>

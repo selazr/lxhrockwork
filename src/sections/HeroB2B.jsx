@@ -72,11 +72,11 @@ export default function HeroB2B() {
             </div>
             <div className="rounded-2xl border border-foreground/10 bg-muted/60 p-3 sm:p-4 dark:bg-foreground/5">
               <p className="text-xs text-foreground/60">Build</p>
-              <p className="mt-1 text-base font-semibold sm:text-lg">Sculpted + painted</p>
+              <p className="mt-1 text-base font-semibold sm:text-lg">Sculpted & painted</p>
             </div>
             <div className="rounded-2xl border border-foreground/10 bg-muted/60 p-3 sm:p-4 dark:bg-foreground/5">
-              <p className="text-xs text-foreground/60">Delivery</p>
-              <p className="mt-1 text-base font-semibold sm:text-lg">Fab + install</p>
+              <p className="text-xs text-foreground/60">End</p>
+              <p className="mt-1 text-base font-semibold sm:text-lg">Delivered & Installed</p>
             </div>
           </div>
         </motion.div>
