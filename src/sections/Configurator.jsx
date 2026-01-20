@@ -11,11 +11,19 @@ const clients = [
 
 const brands = [
   { name: "Marriott", src: "/brands/iberostar.svg" },
-  { name: "Hilton", src: "/brands/KatmanduPark.png" },
+  {
+    name: "Hilton",
+    src: "/brands/KatmanduPark.png",
+    className: "brightness-60 contrast-125 dark:brightness-110",
+  },
   { name: "Four Seasons", src: "/brands/RCI_Flag.svg" },
   { name: "Disney", src: "/brands/santguli.svg" },
   { name: "Hard Rock", src: "/brands/Pairi.png" },
-  { name: "MGM", src: "/brands/central-forest-logo.png" },
+  {
+    name: "MGM",
+    src: "/brands/central-forest-logo.png",
+    className: "brightness-60 contrast-125 dark:brightness-110",
+  },
 ];
 
 export default function Configurator() {
@@ -58,7 +66,9 @@ export default function Configurator() {
                   <img
                     src={brand.src}
                     alt={`${brand.name} logo`}
-                    className="h-10 w-28 object-contain opacity-90 grayscale-0 transition hover:opacity-100 filter brightness-100 contrast-100 dark:brightness-110 dark:contrast-100"
+                    className={`h-10 w-28 object-contain opacity-90 grayscale-0 transition hover:opacity-100 filter brightness-100 contrast-100 dark:brightness-110 dark:contrast-100 ${
+                      brand.className ?? ""
+                    }`}
                   />
                 </div>
               ))}
