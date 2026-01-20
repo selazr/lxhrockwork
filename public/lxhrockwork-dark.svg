@@ -7,7 +7,9 @@
       font-size="96"
       font-weight="800"
       letter-spacing="2"
-      dominant-baseline="middle">
+      dominant-baseline="middle"
+      lengthAdjust="spacingAndGlyphs"
+      textLength="820">
       LXH ROCKWORK
     </text>
 
@@ -18,7 +20,9 @@
       font-size="96"
       font-weight="800"
       letter-spacing="1"
-      dominant-baseline="middle">
+      dominant-baseline="middle"
+      lengthAdjust="spacingAndGlyphs"
+      textLength="200">
       INC.
     </text>
   </g>

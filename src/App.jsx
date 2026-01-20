@@ -118,7 +118,7 @@ export default function App() {
         </div>
       </header>
 
-      <main className="relative space-y-12 pb-16 pt-28">
+      <main className="relative space-y-12 pb-16 pt-32 sm:pt-28">
         <SectionReveal>
           <HeroB2B />
         </SectionReveal>
