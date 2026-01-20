@@ -4,14 +4,14 @@ import { Badge } from "@/components/ui/badge";
 
 export default function HeroB2B() {
   return (
-    <section className="relative mx-auto max-w-6xl px-6 pb-12 pt-4">
+    <section className="relative mx-auto max-w-6xl px-6 pb-12 pt-6 md:pt-4">
       <div className="grid gap-8 md:grid-cols-2 md:items-center">
         <div>
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl font-semibold tracking-tight md:text-5xl"
+            className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl"
           >
             Custom artificial rockwork for immersive theming, architectural design, and structural impact.
           </motion.h1>
@@ -54,7 +54,7 @@ export default function HeroB2B() {
             <img
               src="/ROCK0.png"
               alt="Featured project placeholder"
-              className="h-72 w-full object-cover md:h-80"
+              className="h-60 w-full object-cover sm:h-72 md:h-80"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4">
@@ -65,18 +65,18 @@ export default function HeroB2B() {
             </div>
           </div>
 
-          <div className="mt-4 grid grid-cols-3 gap-3">
-            <div className="rounded-2xl border border-foreground/10 bg-muted/60 p-4 dark:bg-foreground/5">
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-2xl border border-foreground/10 bg-muted/60 p-3 sm:p-4 dark:bg-foreground/5">
               <p className="text-xs text-foreground/60">Scope</p>
-              <p className="mt-1 text-lg font-semibold">Rockwork</p>
+              <p className="mt-1 text-base font-semibold sm:text-lg">Rockwork</p>
             </div>
-            <div className="rounded-2xl border border-foreground/10 bg-muted/60 p-4 dark:bg-foreground/5">
+            <div className="rounded-2xl border border-foreground/10 bg-muted/60 p-3 sm:p-4 dark:bg-foreground/5">
               <p className="text-xs text-foreground/60">Build</p>
-              <p className="mt-1 text-lg font-semibold">Sculpted & painted</p>
+              <p className="mt-1 text-base font-semibold sm:text-lg">Sculpted + painted</p>
             </div>
-            <div className="rounded-2xl border border-foreground/10 bg-muted/60 p-4 dark:bg-foreground/5">
+            <div className="rounded-2xl border border-foreground/10 bg-muted/60 p-3 sm:p-4 dark:bg-foreground/5">
               <p className="text-xs text-foreground/60">Delivery</p>
-              <p className="mt-1 text-lg font-semibold">Fabrication & Install</p>
+              <p className="mt-1 text-base font-semibold sm:text-lg">Fab + install</p>
             </div>
           </div>
         </motion.div>
