@@ -2,6 +2,14 @@ import { useMemo, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -18,6 +26,7 @@ export default function CTA() {
     summary: "",
   });
   const [status, setStatus] = useState("idle");
+  const [isSuccessOpen, setIsSuccessOpen] = useState(false);
 
   const isComplete = useMemo(
     () => Object.values(formValues).every((v) => v.trim().length > 0),
@@ -64,6 +73,7 @@ export default function CTA() {
       );
 
       setStatus("sent");
+      setIsSuccessOpen(true);
       setFormValues({ company: "", email: "", summary: "" });
     } catch (error) {
       console.error("EmailJS error:", error);
@@ -177,6 +187,27 @@ export default function CTA() {
           </div>
         </div>
       </div>
+
+      <Dialog open={isSuccessOpen} onOpenChange={setIsSuccessOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>¡Mensaje enviado!</DialogTitle>
+            <DialogDescription>
+              Tu solicitud ya está enviada. En breve te contestaremos con los
+              próximos pasos.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button
+              className="rounded-2xl"
+              type="button"
+              onClick={() => setIsSuccessOpen(false)}
+            >
+              Entendido
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }

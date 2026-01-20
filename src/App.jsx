@@ -32,7 +32,18 @@ export default function App() {
   }, [isDark]);
 
   const wordmarkClassName =
-    "block h-7 w-auto object-contain transition duration-300 sm:h-9";
+    "block h-8 w-auto object-contain transition duration-300 sm:h-10";
+
+  const SectionReveal = ({ children, delay = 0 }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, delay }}
+    >
+      {children}
+    </motion.div>
+  );
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -43,73 +54,89 @@ export default function App() {
         <div className="absolute left-10 top-1/3 h-56 w-56 rounded-full bg-primary/10 blur-[120px]" />
       </div>
 
-      <header className="relative mx-auto max-w-6xl px-6 py-8">
-        <nav className="flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center rounded-[10px] border border-black/10 bg-black/5 px-2 py-1.5 shadow-[0_6px_18px_rgba(0,0,0,0.08)] backdrop-blur-[10px] dark:border-white/15 dark:bg-white/10 sm:rounded-[12px] sm:px-2.5 sm:py-2">
-            <div>
-              <img
-                src={isDark ? "/lxhrockwork-dark.svg" : "/lxhrockwork.svg"}
-                alt="LXH Rockwork"
-                className={wordmarkClassName}
-              />
-              <p className="text-xs text-foreground/60">Theming · Design · Structures</p>
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-foreground/10 bg-background/80 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center px-6 py-4">
+          <nav className="flex w-full flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-3 rounded-[14px] border border-black/10 bg-black/5 px-3 py-2 shadow-[0_12px_30px_rgba(0,0,0,0.12)] backdrop-blur-[12px] dark:border-white/20 dark:bg-white/10">
+              <div>
+                <img
+                  src={isDark ? "/lxhrockwork-dark.svg" : "/lxhrockwork.svg"}
+                  alt="LXH Rockwork"
+                  className={wordmarkClassName}
+                />
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-foreground/60">
+                  Theming · Design · Structures
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="hidden items-center gap-2 md:flex">
-            <a
-              href="#comparison"
-              className="rounded-full px-4 py-2 text-sm text-foreground/80 hover:bg-foreground/5"
-            >
-              Comparison
-            </a>
-            <a
-              href="#brands"
-              className="rounded-full px-4 py-2 text-sm text-foreground/80 hover:bg-foreground/5"
-            >
-              Brands
-            </a>
-            <a
-              href="#contact"
-              className="rounded-full px-4 py-2 text-sm text-foreground/80 hover:bg-foreground/5"
-            >
-              Contact
-            </a>
-          </div>
+            <div className="hidden items-center gap-2 md:flex">
+              <a
+                href="#comparison"
+                className="rounded-full px-4 py-2 text-sm text-foreground/80 hover:bg-foreground/5"
+              >
+                Comparison
+              </a>
+              <a
+                href="#brands"
+                className="rounded-full px-4 py-2 text-sm text-foreground/80 hover:bg-foreground/5"
+              >
+                Brands
+              </a>
+              <a
+                href="#contact"
+                className="rounded-full px-4 py-2 text-sm text-foreground/80 hover:bg-foreground/5"
+              >
+                Contact
+              </a>
+            </div>
 
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setTheme(isDark ? "light" : "dark")}
-              className="flex items-center gap-2 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-foreground/80 hover:bg-foreground/10"
-            >
-              Theme
-              {isDark ? (
-                <Moon className="h-4 w-4" aria-hidden="true" />
-              ) : (
-                <Sun className="h-4 w-4" aria-hidden="true" />
-              )}
-              <span className="sr-only">
-                {isDark ? "Dark" : "Light"}
-              </span>
-            </button>
-            <a
-              href="#contact"
-              className="rounded-full border border-foreground/10 bg-foreground/5 px-4 py-2 text-sm text-foreground hover:bg-foreground/10"
-            >
-              Request a proposal
-            </a>
-          </div>
-        </nav>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => setTheme(isDark ? "light" : "dark")}
+                className="flex items-center gap-2 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-foreground/80 hover:bg-foreground/10"
+              >
+                Theme
+                {isDark ? (
+                  <Moon className="h-4 w-4" aria-hidden="true" />
+                ) : (
+                  <Sun className="h-4 w-4" aria-hidden="true" />
+                )}
+                <span className="sr-only">
+                  {isDark ? "Dark" : "Light"}
+                </span>
+              </button>
+              <a
+                href="#contact"
+                className="rounded-full border border-foreground/10 bg-foreground/5 px-4 py-2 text-sm text-foreground hover:bg-foreground/10"
+              >
+                Request a proposal
+              </a>
+            </div>
+          </nav>
+        </div>
       </header>
 
-      <main className="relative space-y-12 pb-16">
-        <HeroB2B />
-        <Comparison />
-        <Configurator />
-        <Process />
-        <Portfolio />
-        <CTA />
+      <main className="relative space-y-12 pb-16 pt-28">
+        <SectionReveal>
+          <HeroB2B />
+        </SectionReveal>
+        <SectionReveal>
+          <Comparison />
+        </SectionReveal>
+        <SectionReveal>
+          <Configurator />
+        </SectionReveal>
+        <SectionReveal>
+          <Process />
+        </SectionReveal>
+        <SectionReveal>
+          <Portfolio />
+        </SectionReveal>
+        <SectionReveal>
+          <CTA />
+        </SectionReveal>
       </main>
 
       <footer className="relative mx-auto max-w-6xl px-6 py-10">
