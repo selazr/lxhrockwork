@@ -48,7 +48,7 @@ export default function HeroB2B() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.12 }}
-          className="rounded-3xl border border-foreground/10 bg-foreground/5 p-4"
+          className="rounded-3xl border border-foreground/10 bg-muted/60 p-4 dark:bg-foreground/5"
         >
           <div className="relative overflow-hidden rounded-2xl border border-foreground/10">
             <img
@@ -66,15 +66,15 @@ export default function HeroB2B() {
           </div>
 
           <div className="mt-4 grid grid-cols-3 gap-3">
-            <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
+            <div className="rounded-2xl border border-foreground/10 bg-muted/60 p-4 dark:bg-foreground/5">
               <p className="text-xs text-foreground/60">Scope</p>
               <p className="mt-1 text-lg font-semibold">Rockwork</p>
             </div>
-            <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
+            <div className="rounded-2xl border border-foreground/10 bg-muted/60 p-4 dark:bg-foreground/5">
               <p className="text-xs text-foreground/60">Build</p>
               <p className="mt-1 text-lg font-semibold">Sculpted & painted</p>
             </div>
-            <div className="rounded-2xl border border-foreground/10 bg-foreground/5 p-4">
+            <div className="rounded-2xl border border-foreground/10 bg-muted/60 p-4 dark:bg-foreground/5">
               <p className="text-xs text-foreground/60">Delivery</p>
               <p className="mt-1 text-lg font-semibold">Fabrication & Install</p>
             </div>

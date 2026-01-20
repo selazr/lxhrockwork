@@ -47,7 +47,7 @@ export default function CTA() {
 
   return (
     <section id="contact" className="relative mx-auto max-w-6xl px-6 py-12">
-      <div className="rounded-4xl border border-foreground/10 bg-foreground/5 p-6 shadow-2xl shadow-black/20 md:p-10">
+      <div className="rounded-4xl border border-foreground/10 bg-muted/60 p-6 shadow-2xl shadow-black/20 dark:bg-foreground/5 md:p-10">
         <SectionHeader
           eyebrow="Contact"
           title="Request a proposal"
@@ -55,7 +55,7 @@ export default function CTA() {
         />
 
         <div className="grid gap-6 md:grid-cols-2">
-          <Card className="border-foreground/10 bg-foreground/5">
+          <Card className="border-foreground/10 bg-muted/50 dark:bg-foreground/5">
             <CardContent className="space-y-4 p-6">
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
@@ -116,7 +116,7 @@ export default function CTA() {
             </CardContent>
           </Card>
 
-          <div className="rounded-3xl border border-foreground/10 bg-foreground/5 p-6">
+          <div className="rounded-3xl border border-foreground/10 bg-muted/50 p-6 dark:bg-foreground/5">
             <p className="text-sm font-semibold">What to include</p>
             <ul className="mt-3 space-y-2 text-sm text-foreground/70">
               <li>• Location: indoor/outdoor/wet</li>

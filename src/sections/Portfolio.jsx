@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 export default function Portfolio() {
   return (
     <section className="relative mx-auto max-w-6xl px-6 py-12">
-      <div className="rounded-4xl border border-foreground/10 bg-foreground/5 p-6 shadow-2xl shadow-black/20 md:p-10">
+      <div className="rounded-4xl border border-foreground/10 bg-muted/60 p-6 shadow-2xl shadow-black/20 dark:bg-foreground/5 md:p-10">
         <SectionHeader
           eyebrow="Portfolio"
           title="Use cases for artificial rockwork"
@@ -13,7 +13,7 @@ export default function Portfolio() {
         />
 
         <div className="grid gap-4 md:grid-cols-3">
-          <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
+          <Card className="overflow-hidden border-foreground/10 bg-muted/50 dark:bg-foreground/5">
             <img src="/ROCK6.png" alt="Theme park case study" className="h-40 w-full object-cover" />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
@@ -25,7 +25,7 @@ export default function Portfolio() {
               </p>
             </CardContent>
           </Card>
-          <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
+          <Card className="overflow-hidden border-foreground/10 bg-muted/50 dark:bg-foreground/5">
             <img src="/ROCK4.png" alt="Hotel resort case study" className="h-40 w-full object-cover" />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
@@ -37,7 +37,7 @@ export default function Portfolio() {
               </p>
             </CardContent>
           </Card>
-          <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
+          <Card className="overflow-hidden border-foreground/10 bg-muted/50 dark:bg-foreground/5">
             <img src="/ROCK.jpeg" alt="Experiential retail case study" className="h-40 w-full object-cover" />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
@@ -49,7 +49,7 @@ export default function Portfolio() {
               </p>
             </CardContent>
           </Card>
-          <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
+          <Card className="overflow-hidden border-foreground/10 bg-muted/50 dark:bg-foreground/5">
             <img src="/ROCK2.png" alt="Event booth case study" className="h-40 w-full object-cover" />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
@@ -61,7 +61,7 @@ export default function Portfolio() {
               </p>
             </CardContent>
           </Card>
-          <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
+          <Card className="overflow-hidden border-foreground/10 bg-muted/50 dark:bg-foreground/5">
             <img src="/ROCK5.png" alt="Minigolf & Mountains" className="h-40 w-full object-cover" />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">
@@ -73,7 +73,7 @@ export default function Portfolio() {
               </p>
             </CardContent>
           </Card>
-          <Card className="overflow-hidden border-foreground/10 bg-foreground/5">
+          <Card className="overflow-hidden border-foreground/10 bg-muted/50 dark:bg-foreground/5">
             <img src="/ROCK3.png" alt="Wellness zone case study" className="h-40 w-full object-cover" />
             <CardContent className="p-5">
               <div className="flex items-start justify-between gap-3">

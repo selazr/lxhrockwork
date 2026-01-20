@@ -12,7 +12,7 @@ import { Badge } from "@/components/ui/badge";
 export default function Comparison() {
   return (
     <section id="comparison" className="relative mx-auto max-w-6xl px-6 py-12">
-      <div className="rounded-4xl border border-foreground/10 bg-foreground/5 p-6 shadow-2xl shadow-black/20 md:p-10">
+      <div className="rounded-4xl border border-foreground/10 bg-muted/60 p-6 shadow-2xl shadow-black/20 dark:bg-foreground/5 md:p-10">
         <SectionHeader
           eyebrow="Comparison"
           title="Natural rock vs. engineered rockwork"

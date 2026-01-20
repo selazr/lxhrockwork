@@ -45,7 +45,7 @@ const brands = [
 export default function Configurator() {
   return (
     <section id="brands" className="relative mx-auto max-w-6xl px-6 py-12">
-      <div className="rounded-4xl border border-foreground/10 bg-foreground/5 p-6 shadow-2xl shadow-black/20 md:p-10">
+      <div className="rounded-4xl border border-foreground/10 bg-muted/60 p-6 shadow-2xl shadow-black/20 dark:bg-foreground/5 md:p-10">
         <SectionHeader
           eyebrow="Trusted by"
           title="Clients and brands we have partnered with"
@@ -53,7 +53,7 @@ export default function Configurator() {
         />
 
         <div className="mt-8 grid gap-6 md:grid-cols-[1.05fr_0.95fr]">
-          <div className="rounded-3xl border border-foreground/10 bg-background/40 p-6">
+          <div className="rounded-3xl border border-foreground/10 bg-muted/40 p-6 dark:bg-background/40">
             <h3 className="text-lg font-semibold text-foreground">Featured clients</h3>
             <p className="mt-2 text-sm text-foreground/70">
               We collaborate with creative teams, operators, and developers who pursue memorable experiences.
@@ -68,7 +68,7 @@ export default function Configurator() {
             </ul>
           </div>
 
-          <div className="rounded-3xl border border-foreground/10 bg-background/40 p-6">
+          <div className="rounded-3xl border border-foreground/10 bg-muted/40 p-6 dark:bg-background/40">
             <h3 className="text-lg font-semibold text-foreground">Partner brands</h3>
             <p className="mt-2 text-sm text-foreground/70">
               A selection of recognized brands we have helped deliver unique experiences for.
@@ -77,7 +77,7 @@ export default function Configurator() {
               {brands.map((brand) => (
                 <div
                   key={brand.name}
-                  className={`flex items-center justify-center rounded-2xl border border-foreground/10 bg-foreground/10 px-4 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-foreground/15 dark:bg-white/10 dark:hover:bg-white/15 ${
+                  className={`flex items-center justify-center rounded-2xl border border-foreground/10 bg-muted/70 px-4 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-muted/80 dark:bg-white/10 dark:hover:bg-white/15 ${
                     brand.tileClassName ?? ""
                   }`}
                 >
@@ -91,7 +91,7 @@ export default function Configurator() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 rounded-2xl border border-foreground/10 bg-background/60 p-4">
+            <div className="mt-6 rounded-2xl border border-foreground/10 bg-muted/60 p-4 dark:bg-background/60">
               <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-foreground/70">
                 <span className="font-semibold text-foreground">120+ projects delivered</span>
                 <span>Hospitality, leisure, and public spaces</span>
