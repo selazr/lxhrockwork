@@ -142,7 +142,7 @@ export default function App() {
       <footer className="relative mx-auto max-w-6xl px-6 py-10">
         <div className="flex flex-col gap-2 border-t border-foreground/10 pt-6 text-sm text-foreground/60 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} LXH Rockwork</p>
-          <p>2250 Lucien Way Suite 305, 32751 - Maitlands</p>
+          <p>2250 Lucien Way Suite 305, 32751 - Maitland</p>
         </div>
       </footer>
 
