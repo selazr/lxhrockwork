@@ -127,7 +127,7 @@ export default function CTA() {
 
             <div className="mt-6">
               <Button asChild variant="secondary" className="rounded-2xl">
-                <a href="#configurator">Back to configurator</a>
+                <a href="#brands">Back to brands</a>
               </Button>
             </div>
           </div>

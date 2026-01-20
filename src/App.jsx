@@ -64,10 +64,10 @@ export default function App() {
               Comparison
             </a>
             <a
-              href="#configurator"
+              href="#brands"
               className="rounded-full px-4 py-2 text-sm text-foreground/80 hover:bg-foreground/5"
             >
-              Configurator
+              Brands
             </a>
             <a
               href="#contact"

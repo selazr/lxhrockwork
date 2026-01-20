@@ -13,30 +13,38 @@ const brands = [
   {
     name: "Marriott",
     src: "/brands/iberostar.svg",
-    className: "dark:brightness-125 dark:contrast-110",
+    className: "brightness-90 contrast-125 dark:invert dark:brightness-110",
   },
   {
     name: "Hilton",
     src: "/brands/KatmanduPark.png",
-    className: "brightness-75 contrast-125 dark:brightness-110",
+    className: "brightness-85 contrast-125 dark:brightness-115 dark:contrast-110",
   },
   {
     name: "Four Seasons",
     src: "/brands/RCI_Flag.svg",
-    className: "dark:brightness-125 dark:contrast-110",
+    className: "brightness-90 contrast-120 dark:invert dark:brightness-110",
   },
-  { name: "Disney", src: "/brands/santguli.svg" },
-  { name: "Hard Rock", src: "/brands/Pairi.png" },
+  {
+    name: "Disney",
+    src: "/brands/santguli.svg",
+    className: "brightness-85 contrast-125 dark:brightness-110",
+  },
+  {
+    name: "Hard Rock",
+    src: "/brands/Pairi.png",
+    className: "brightness-90 contrast-120 dark:brightness-110",
+  },
   {
     name: "MGM",
     src: "/brands/central-forest-logo.png",
-    className: "brightness-70 contrast-130 dark:brightness-110",
+    className: "brightness-85 contrast-125 dark:invert dark:brightness-110",
   },
 ];
 
 export default function Configurator() {
   return (
-    <section id="configurator" className="relative mx-auto max-w-6xl px-6 py-12">
+    <section id="brands" className="relative mx-auto max-w-6xl px-6 py-12">
       <div className="rounded-4xl border border-foreground/10 bg-foreground/5 p-6 shadow-2xl shadow-black/20 md:p-10">
         <SectionHeader
           eyebrow="Trusted by"
@@ -69,7 +77,7 @@ export default function Configurator() {
               {brands.map((brand) => (
                 <div
                   key={brand.name}
-                  className={`flex items-center justify-center rounded-2xl border border-foreground/10 bg-foreground/5 px-4 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-foreground/10 ${
+                  className={`flex items-center justify-center rounded-2xl border border-foreground/10 bg-foreground/10 px-4 py-6 shadow-sm transition hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-foreground/15 dark:bg-white/10 dark:hover:bg-white/15 ${
                     brand.tileClassName ?? ""
                   }`}
                 >

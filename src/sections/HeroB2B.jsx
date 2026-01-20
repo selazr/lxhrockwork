@@ -39,7 +39,7 @@ export default function HeroB2B() {
               <a href="#comparison">See comparison</a>
             </Button>
             <Button asChild variant="secondary" className="rounded-2xl">
-              <a href="#configurator">Clients and brands</a>
+              <a href="#brands">Brands</a>
             </Button>
           </div>
         </div>
