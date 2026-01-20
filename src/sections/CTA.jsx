@@ -6,6 +6,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 export default function CTA() {
+  // TODO: Replace these placeholder values with your EmailJS credentials.
+  // You can create them at https://www.emailjs.com/ (service ID, template ID, public key).
+  const EMAILJS_SERVICE_ID = "REPLACE_WITH_SERVICE_ID";
+  const EMAILJS_TEMPLATE_ID = "REPLACE_WITH_TEMPLATE_ID";
+  const EMAILJS_PUBLIC_KEY = "REPLACE_WITH_PUBLIC_KEY";
+
   const [formValues, setFormValues] = useState({
     company: "",
     email: "",
@@ -23,26 +29,43 @@ export default function CTA() {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (!isComplete) {
       setStatus("missing");
       return;
     }
+    setStatus("sending");
 
-    const mailRecipient = "hello@lxhrockwork.com";
-    const subject = `Proposal request from ${formValues.company}`;
-    const body = [
-      `Company: ${formValues.company}`,
-      `Email: ${formValues.email}`,
-      `Project summary: ${formValues.summary}`,
-    ].join("\n");
+    const payload = {
+      service_id: EMAILJS_SERVICE_ID,
+      template_id: EMAILJS_TEMPLATE_ID,
+      user_id: EMAILJS_PUBLIC_KEY,
+      template_params: {
+        company: formValues.company,
+        email: formValues.email,
+        summary: formValues.summary,
+      },
+    };
 
-    const mailto = `mailto:${mailRecipient}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-    setStatus("sent");
+    try {
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("EmailJS request failed");
+      }
+
+      setStatus("sent");
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setStatus("error");
+    }
   };
 
   return (
@@ -104,12 +127,20 @@ export default function CTA() {
 
                 <p className="text-xs text-foreground/50">
                   {status === "sent"
-                    ? "We opened your email app with the proposal details ready to send."
-                    : "This form opens your email app so you can send the request right away."}
+                    ? "Thanks! Your request is on its way."
+                    : "We use EmailJS to send this form. Add your service/template/key in the CTA component."}
                 </p>
                 {status === "missing" && (
                   <p className="text-xs text-amber-500" role="alert">
                     Please complete all fields before sending the request.
+                  </p>
+                )}
+                {status === "sending" && (
+                  <p className="text-xs text-foreground/60">Sending...</p>
+                )}
+                {status === "error" && (
+                  <p className="text-xs text-red-500" role="alert">
+                    Something went wrong. Please try again after configuring EmailJS.
                   </p>
                 )}
               </form>
